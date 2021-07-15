@@ -1,0 +1,234 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-image: url('images/membership.jpg');
+  background-size:100%;
+}
+
+
+body {
+  font-family: Arial;
+  font-size: 25px;
+  padding: 90px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 10px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+.right{
+    position:absolute;
+	top:5%;
+	right:5%;
+	}
+	
+	
+.btn1 {
+  background-color: #111;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.btn1:hover {opacity: 0.6}
+
+.dropdown {
+ -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  width: 100%;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="membership.php" method="post">
+      
+        <div class="row">
+          <div class="col-50">
+            <center><h3>Membership Form</h3></center><div class="dropdown" >
+			<label for="branch" ><i class="fa fa-institution" style="margin-left:25%";></i> Branch</label>
+            <center><input type="text" name="branch" name="branch" list="branch" placeholder="select branches">
+			<datalist id="branch">
+			<option value="BENGALORE">
+			<option value="BELGAM">
+			<option value="DAVANGERE">
+			<option value="HUBLI">
+			<option value="MANGALORE">
+			<option value="MYSORE">
+			</datalist>
+             </center></div>
+            <label for="fullname"><i class="fa fa-user" style="margin-left:25%";></i> Full Name</label>
+            <center><input type="text" id="fullname" name="fullname" placeholder="Enter full name">
+             </center>
+			 
+			 
+            <div class="row">
+              <div class="col-25">
+                <label for="date">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+				<i class="fa fa-birthday-cake" style="margin-left:25%";></i> DOB</label>
+                <center>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+				<input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD">
+               </center>
+			  </div>
+              <div class="col-25">
+                <label for="age" style="margin-left:25%";> Age</label>
+                <center><input type="text" id="age" name="age" placeholder="Enter your age"></center>
+              </div>
+            </div>
+			
+			<label for="gender"><i class="fa fa-user" style="margin-left:25%";></i> Gender</label>
+            <center><input  class="dropdown" type="text" name="gender" list="gender" placeholder="select gender">
+			<datalist id="gender">
+			<option value="female">
+			<option value="male">
+			<option value="others">
+			
+			</datalist>
+             </center>
+			
+			<div class="row">
+              <div class="col-25">
+                <label for="height">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+				<i class="fa fa-weight" style="margin-left:25%";></i> Weight</label>
+                <center>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+				<input type="text" id="weight" name="weight" placeholder="Enter your Weight">
+               </center>
+			  </div>
+              <div class="col-25">
+                <label for="height" style="margin-left:25%";><i class="fa fa-height"></i> Height</label>
+                <center><input type="text" id="height" name="height" placeholder="Enter your height in cm"></center>
+              </div>
+          </div>
+			
+			<label for="package" style="margin-left:25%";> Package</label>
+            <center><input type="text" name="package" list="package" placeholder="select package">
+			<datalist id="package">
+			<option value="1 month(1,500/-)">
+			<option value="3 months(4,000/-)">
+			<option value="6 months(8,000/-)">
+			<option value="1 year(15,000/-)">
+			</datalist></center>
+			<label for="email"><i class="fa fa-envelope" style="margin-left:25%";></i> Email</label>
+            <center><input type="text" id="email" name="email" placeholder="Enter email "></center>
+			 <label for="phoneno"><i class="fa fa-phone" style="margin-left:25%";></i> Phone No</label>
+            <center><input type="text" id="phoneno" name="phoneno" placeholder="Enter Phone Number "></center>
+			<label for="address"><i class="fa fa-address-card-o" style="margin-left:25%";></i> Address</label>
+            <center><input type="text" id="adr" name="address" placeholder="Enter address"></center>
+            <label for="city"><i class="fa fa-institution" style="margin-left:25%";></i> City</label>
+            <center><input type="text" id="city" name="city" placeholder="Enter city"></center>
+		  </div>
+		 </div>
+			 <center><button class="btn1" onclick="window.location.href = 'payment.html';">Processed to pay</center></button>
+       
+    </div>
+  </div>
+</div>
+
+</body>
